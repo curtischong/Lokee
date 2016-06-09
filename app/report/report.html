@@ -1,0 +1,51 @@
+        <div>
+
+            <div style="display:inline;">
+                <p style=" width:125px; float:left; margin-left: 80px;margin-top: 50px;">Issue Title:</p>
+                <input style="border: 1px solid white; border-bottom: 1px solid black; margin-top: 50px; outline: none; width: 300px;" placeholder="Title of Issue (garbage in park)" ng-model="issuetitle">
+            </div>
+        </div>
+        <br>
+        <div>
+
+            <div style="display:inline;">
+                <p style=" width:125px; float:left; margin-left: 80px;">Issue Description:</p>
+                <input style="border: 1px solid white; border-bottom: 1px solid black; margin-top: 35px; outline: none; width: 300px;" placeholder="Description of Issue (the graffiti looks like)" ng-model="issuedescription">
+            </div>
+        </div>
+        <br>
+        <div>
+            
+            <div style="display:inline;">
+                <p style=" width:125px; float:left; margin-left: 80px;">Issue Location:</p>
+                <input style="border: 1px solid white; border-bottom: 1px solid black; margin-top: 15px; outline: none; width: 300px;" placeholder="Address of issue (33 Spadana)" ng-model="issuelocation">
+            </div>
+        </div>
+        <br>
+        
+
+            <div style="display:inline;">
+                <p style=" width:125px; float:left; margin-left: 80px;">Issue Type:</p>
+                
+                <input type="text" name="city" list="issuetypes" ng-model="issuetype" placeholder="What type of issue is it?" style="margin-top: 15px; border: none; border-bottom: 1px solid black; outline: none; width: 300px;">
+                <datalist id="issuetypes">
+                  <option value="garbage"></option>
+                  <option value="graffiti"></option>
+                  <option value="road kill"></option>
+                </datalist>
+                                
+                
+
+                 </select>
+                 
+                 
+                <!--<input style="border: 1px solid white; border-bottom: 1px solid black;" placeholder="Type of issue" ng-model="issuetype">-->
+            </div>
+        </div>
+        <br>
+        <input type="file" name="fileToUpload" id="fileToUpload" value="Upload File" style="float: center; margin: 0 auto;">
+        
+        <br>
+        <br>
+        
+        <button id="page-button13" class=" button button-positive  button-block" style="background-color: #003366; padding: 5px; border: 1px solid #003366; color: white; width: 300px;  margin: 0 auto;" ng-click="addIssue(issuetitle,issuedescription,issuelocation,issuetype)">Add New Issue</button>
